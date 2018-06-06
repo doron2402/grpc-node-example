@@ -8,8 +8,8 @@ Messaging API using GRPC
 - There are several options for CRUD operation on the "db" (the json file `db.json` but you get the gist).
 
 ## Important files
-- Server `server.js`: the server will define the methods we want to expose to our client.
-- Client `client-cli.js`: the client will be communicating with our server (server.js) via http 2.0.
+###Server `server.js`: the server will define the methods we want to expose to our client.
+###Client `client-cli.js`: the client will be communicating with our server (server.js) via http 2.0.
 - Database `db.json`: instead of using real database, in this example I'll be using a simple json file.
 - Schema `message.proto`: protobuf message schema, this define the message schema
 
