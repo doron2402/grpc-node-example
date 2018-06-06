@@ -13,7 +13,6 @@ Messaging API using GRPC
 - Database `db.json`: instead of using real database, in this example I'll be using a simple json file.
 - Schema `message.proto`: protobuf message schema, this define the message schema
 
-
 ## Client
 - Create Message: `node client-cli.js insert '{"created_by": 1, "created_at": "2017-01-01T10:23:44.000Z", "body": "Some text as message body","thread_id": 1}'`
 
@@ -24,3 +23,6 @@ Messaging API using GRPC
 - Delete/Remove Message (by id): `node client-cli.js remove <id>`
 
 - Update Message: `node client-cli.js update '{"message_id": 1, "created_by": 1, "created_at": "2017-01-01T10:23:44.000Z", "body": "Some text as message body","thread_id": 1}'` ** make sure to pass `message_id`
+
+# Inspired by:
+- https://youtu.be/RoXT_Rkg8LA
