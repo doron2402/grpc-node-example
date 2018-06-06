@@ -1,0 +1,16 @@
+{
+  "name": "grpc-example-messages",
+  "version": "1.0.0",
+  "description": "GRPC example - messages API service",
+  "main": "cli-client",
+  "scripts": {
+    "test": "node test.js",
+    "server": "node server.js",
+    "list": "node client-cli.js list"
+  },
+  "author": "Doron Segal",
+  "license": "ISC",
+  "dependencies": {
+    "grpc": "^1.12.2"
+  }
+}

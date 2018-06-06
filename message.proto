@@ -1,0 +1,55 @@
+/**
+  Message
+  
+  message should contain
+  - body (text): message body should be text
+  - created_by (int): the user id that created the message
+  - created_at (string): UTC date when the message created should default to now
+  - updated_by (int): the user id if the message got updated
+  - updated_at (string): UTC date when the message got updated
+  - thread_id (int): the thread that the message belongs
+  - included (array of object): contains list of files that included to the message
+**/
+syntax = "proto3";
+
+service message {
+  rpc getList (NoMessages) returns (ListOfMessages) {}
+
+  rpc getById (messageIdOnly) returns (MessageReuqest) {}
+
+  rpc insert (MessageReuqest) returns (MessageReuqest) {}
+
+  rpc update (MessageReuqest) returns (MessageReuqest) {}
+
+  rpc remove (messageIdOnly) returns (NoMessages) {}
+}
+
+message NoMessages {}
+
+message ListOfMessages {
+  repeated MessageReuqest messages = 1;
+};
+
+message IncludedFiles {
+  int64 file_id = 1;
+  string file_name = 2;
+  string uploaded_at = 3;
+}
+message MessageReuqest {
+  int64 message_id = 1;
+  int64 created_by = 2;
+  string created_at = 3;
+
+  int64 updated_by = 4;
+  int64 updated_at = 5;
+
+  string body = 6;
+
+  int64 thread_id = 7;
+
+  repeated IncludedFiles includes = 8;
+}
+
+message messageIdOnly {
+  int64 message_id = 1;
+}

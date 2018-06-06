@@ -1,0 +1,35 @@
+[
+  {
+    "message_id": 1,
+    "created_by": 2,
+    "created_at": "2018-01-01T10:00:00.000Z",
+    "body": "Hello world!",
+    "thread_id": 1
+  },
+  {
+    "message_id": 2,
+    "created_by": 1,
+    "created_at": "2018-01-11T13:22:13.400Z",
+    "body": "Hello world22",
+    "thread_id": 2
+  },
+  {
+    "message_id": 3,
+    "created_by": 1,
+    "created_at": "2018-02-02T10:00:00.000Z",
+    "body": "Bye World!",
+    "thread_id": 1,
+    "includes": [
+      {
+        "file_id": 1,
+        "file_name": "file_one.jpg",
+        "uploaded_at": "2018-02-02T10:00:00.100Z"
+      },
+      {
+        "file_id": 2,
+        "file_name": "file_two.jpg",
+        "uploaded_at": "2018-02-02T10:00:00.300Z"
+      }
+    ]
+  }
+]
